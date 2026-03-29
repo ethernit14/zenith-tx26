@@ -17,16 +17,17 @@ module tt_um_zenith_tx26 (
 
     // CPU wires
     wire [15:0] pc;
-    wire [15:0] r1;
+    wire [15:0] r1_out;
 
     // Instantiate CPU
     cpu_top cpu (
         .clk(clk),
         .reset(~rst_n),
-        .pc(pc)
+        .pc(pc),
+        .r1_out(r1_out)
     );
 
     // Show R1 on output pins
-    assign uo_out = cpu.rf_inst.registers[1][7:0];
+    assign uo_out = r1_out[7:0];
 
 endmodule

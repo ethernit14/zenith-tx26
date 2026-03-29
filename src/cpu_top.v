@@ -1,7 +1,8 @@
 module cpu_top(
     input clk,
     input reset,
-    output [15:0] pc
+    output [15:0] pc,
+    output wire [15:0] r1_out
 );
     // internal wires
     wire [15:0] instruction;
@@ -109,5 +110,7 @@ module cpu_top(
     // Jump/Branch logic
     assign pc_jump      = jump_en | branch_en;
     assign pc_jump_addr = jump_en ? immediate_ext : pc + 1 + immediate_ext;
+
+    assign r1_out = rf_inst.registers[1];
 
 endmodule
