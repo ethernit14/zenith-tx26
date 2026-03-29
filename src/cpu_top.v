@@ -78,7 +78,8 @@ module cpu_top(
         .write_data(write_back_data),
         .write_en(reg_write_en),    
         .read_data1(reg_data1),
-        .read_data2(reg_data2)
+        .read_data2(reg_data2),
+        .r1_out(r1_out)
     );
 
     // ALU input B mux — register or immediate
@@ -111,6 +112,5 @@ module cpu_top(
     assign pc_jump      = jump_en | branch_en;
     assign pc_jump_addr = jump_en ? immediate_ext : pc + 1 + immediate_ext;
 
-    assign r1_out = rf_inst.registers[1];
 
 endmodule

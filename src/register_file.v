@@ -7,10 +7,12 @@ module register_file (
     input [15:0] write_data,
     input write_en,
     output [15:0] read_data1,
-    output [15:0] read_data2
+    output [15:0] read_data2,
+    output [15:0] r1_out
 );
 
     reg [15:0] registers [0:7];
+    assign r1_out = registers[1];
 
     integer i;
 
