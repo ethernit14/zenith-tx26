@@ -7,6 +7,18 @@ project:
   description:  "A 16-bit CPU designed from scratch in Verilog. Runs Fibonacci sequence."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     27000000       # Clock frequency in Hz (or 0 if not applicable)
+  top_module:  "tt_um_zenith_tx26"
+  source_files:
+    - tt_um_zenith_tx26.v
+    - cpu_top.v
+    - alu.v
+    - control_unit.v
+    - data_memory.v
+    - instruction_decoder.v
+    - instruction_mem.v
+    - program_counter.v
+    - register_file.v
+    - sign_extender.v
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
