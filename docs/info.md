@@ -1,20 +1,19 @@
-<!---
+# Zenith TX26 — 16-bit CPU
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+A 16-bit CPU designed from scratch in Verilog by Doruk Orak, age 16, Istanbul.
 
 ## How it works
 
-Explain how your project works
+The Zenith TX26 is a fully custom 16-bit CPU with:
+- 8 registers (R0-R7, R0 hardwired to 0)
+- 16 instructions (ADD, SUB, AND, OR, XOR, SHL, SHR, SLT, LDI, ADDI, LD, ST, JMP, BEQ, BLT, NOP)
+- Harvard architecture (separate instruction and data memory)
+- Runs infinite Fibonacci sequence on output pins
 
 ## How to test
 
-Explain how to use your project
+Connect 8 LEDs to the output pins. The LEDs will display the current Fibonacci number in binary: 1, 1, 2, 3, 5, 8, 13, 21...
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+8 LEDs connected to the output pins to display Fibonacci numbers in binary (optional).
