@@ -1,12 +1,12 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
   wokwi_id:     0       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "Zenith TX26"      # Project title
+  author:       "Doruk Orak"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  description:  "A 16-bit CPU designed from scratch in Verilog. Runs Fibonacci sequence."      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     27000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
@@ -26,14 +26,14 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "R1 bit 0 (Fibonacci output)"
+  uo[1]: "R1 bit 1"
+  uo[2]: "R1 bit 2"
+  uo[3]: "R1 bit 3"
+  uo[4]: "R1 bit 4"
+  uo[5]: "R1 bit 5"
+  uo[6]: "R1 bit 6"
+  uo[7]: "R1 bit 7"
 
   # Bidirectional pins
   uio[0]: ""
